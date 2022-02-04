@@ -18,14 +18,14 @@ export default async function (req: VercelRequest, res: VercelResponse): Promise
     const token = await getTokenByAddress(address.toLowerCase());
 
     return200(res, {
-/*       updated_at: new Date().getTime(), */
-/*       data: { */
-        name: token?.name,
-        symbol: token?.symbol,
-        price_usd: token?.derivedUSD, // puse _usd pal plugin
-        price_BNB: token?.derivedBNB,
-        last_updated: new Date().getTime(),
-/*       }, */
+      /*       updated_at: new Date().getTime(), */
+      /*       data: { */
+      name: token?.name,
+      symbol: token?.symbol,
+      price_usd: token?.derivedUSD, // puse _usd pal plugin
+      price_BNB: token?.derivedBNB,
+      last_updated: new Date().getTime(),
+      /*       }, */
     });
   } catch (error) {
     return500(res, error);
