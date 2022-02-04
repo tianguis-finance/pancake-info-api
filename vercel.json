@@ -9,7 +9,16 @@
     {
       "source": "/api/tokens/:address",
       "destination": "/api/tokens/tokens"
+    },
+    {
+      "source": "/api/tokensjson",
+      "destination": "/api/tokensjson"
+    },
+    {
+      "source": "/api/tokensjson/:address",
+      "destination": "/api/tokensjson/tokens"
     }
+
   ],
   "headers": [
     {
