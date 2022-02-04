@@ -16,20 +16,17 @@ export default async function (req: VercelRequest, res: VercelResponse): Promise
   try {
     const address = getAddress(req.query.address);
     const token = await getTokenByAddress(address.toLowerCase());
-    const json = JSON.stringify([
+    const json = [
       {
-        /*       updated_at: new Date().getTime(), */
-        /*       data: { */
         name: token?.name,
         symbol: token?.symbol,
         price_usd: token?.derivedUSD, // puse _usd pal plugin
         price_BNB: token?.derivedBNB,
         last_updated: new Date().getTime(),
-        /*       }, */
       },
-    ])
+    ];
 
-    return200(res, json );
+    return200(res, json);
   } catch (error) {
     return500(res, error);
   }
