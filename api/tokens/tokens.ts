@@ -17,7 +17,7 @@ export default async function (req: VercelRequest, res: VercelResponse): Promise
     const address = getAddress(req.query.address);
     const token = await getTokenByAddress(address.toLowerCase());
 
-    return200(res, {
+    return200(res, [{
       /*       updated_at: new Date().getTime(), */
       /*       data: { */
       name: token?.name,
@@ -26,7 +26,7 @@ export default async function (req: VercelRequest, res: VercelResponse): Promise
       price_BNB: token?.derivedBNB,
       last_updated: new Date().getTime(),
       /*       }, */
-    });
+    }]);
   } catch (error) {
     return500(res, error);
   }
