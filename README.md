@@ -1,4 +1,4 @@
-# Tianguis API bandaaaaaaaaaa
+# Tianguis API bandaaaaaaaaaa.
 
 The PancakeSwap API is a set of endpoints used by market aggregators (e.g. coinmarketcap.com) to surface PancakeSwap liquidity
 and volume information. All information is fetched from the underlying subgraphs.
